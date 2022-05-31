@@ -22,6 +22,39 @@
     align-items: center;
 }
 
+.d-column {
+    flex-direction: column;
+}
+
+.purple {
+    background-color: #9792E4;
+}
+
+.white {
+    background-color: white;
+}
+
+.margin-50 {
+    margin-bottom: 50px;
+}
+
+.margin-30 {
+    margin-bottom: 30px;
+}
+
+.padding-50 {
+    padding: 50px 0 50px;
+}
+
+/* general */
+
+
+.container {
+    max-width: 700px;
+    width: 85%;
+
+}
+
 
 
 
@@ -34,11 +67,6 @@ header {
     position: fixed;
 }
 
-.container {
-    max-width: 1100px;
-    width: 90%;
-
-}
 
 #logo {
     height: 50px;
@@ -70,10 +98,7 @@ main {
 
 /* 1st section */
 
-.col {
-    max-width: 1100px;
-    width: 90%;
-}
+
 
 
 .paragraph-demo {
@@ -103,8 +128,50 @@ main {
 }
 
 
+/* 2nd section */
 
-@media screen and (min-width: 769px) {
+.strategic-img {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+
+.app-img {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+
+/* 3rd section */
+
+.testimonial {
+    text-align: center;
+}
+
+.card {
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+}
+
+/* 5th section */
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 992px) {
 
     /* header */
 
@@ -131,33 +198,63 @@ main {
         border-radius: 0 20px 20px 0;
     }
 
+    /* 2nd section */
+
+    .strategic .col {
+        display: flex;
+        width: 50%;
+    }
+
+    /* 4th section */
+
+    .benefits .card {
+        max-width: calc(100% / 3 - 20px);
+    }
+
+
 }
 
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 769px) {
 
     /* 1st section */
 
     .row {
         display: flex;
+        justify-content: space-between;
     }
 
 
 
-    .second-row {
-        display: flex;
-        justify-content: space-between;
-
+    .demo {
+        width: calc(100% / 3 * 2 - 10px)
     }
 
     .row .paragraph {
         min-width: calc(100% / 3 - 20px);
-        margin-left: 30px;
+
     }
 
     .paragraph {
         width: calc(100% / 3 - 20px);
     }
 
+    /* 3rd section */
 
+    .card {
+        flex-direction: row;
+        text-align: justify;
+    }
+
+    /* 4th section */
+
+    .benefits {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .benefits .card {
+        width: calc(100% / 2 - 20px);
+    }
 }
